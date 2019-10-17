@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  flix
 //
-//  Created by Student on 10/14/19.
+//  Created by Regina Bass on 10/14/19.
 //  Copyright © 2019 Regina Bass. All rights reserved.
 //
 
