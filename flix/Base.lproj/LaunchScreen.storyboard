@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,22 +12,38 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="KW1-qz-uQt">
-                                <rect key="frame" x="86" y="226" width="242" height="244"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="350" placeholderIntrinsicHeight="350" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="KW1-qz-uQt">
+                                <rect key="frame" x="273" y="32" width="350" height="350"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FLIX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqu-ZC-ozm">
-                                <rect key="frame" x="131" y="372" width="152" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="300" text="FLIX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqu-ZC-ozm">
+                                <rect key="frame" x="298" y="57" width="300" height="300"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="54"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KW1-qz-uQt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1ge-68-q0u"/>
+                            <constraint firstItem="KW1-qz-uQt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="290-Og-8GV"/>
+                            <constraint firstItem="pqu-ZC-ozm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Fgj-Zh-fbv"/>
+                            <constraint firstItem="pqu-ZC-ozm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GhY-Lz-4fO"/>
+                            <constraint firstItem="pqu-ZC-ozm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Iqb-Cb-biI"/>
+                            <constraint firstItem="KW1-qz-uQt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="X0G-pV-5dx"/>
+                            <constraint firstItem="pqu-ZC-ozm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="a9T-zs-5vX"/>
+                            <constraint firstItem="KW1-qz-uQt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fBk-hE-yuM"/>
+                            <constraint firstItem="KW1-qz-uQt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gDK-OC-y8X"/>
+                            <constraint firstItem="KW1-qz-uQt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jUv-Jq-4bV"/>
+                            <constraint firstItem="KW1-qz-uQt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jYf-rZ-1cn"/>
+                            <constraint firstItem="pqu-ZC-ozm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="nCo-FG-lby"/>
+                            <constraint firstItem="KW1-qz-uQt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rIg-KJ-kCQ"/>
+                            <constraint firstItem="pqu-ZC-ozm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="v9O-FC-28S"/>
+                            <constraint firstItem="KW1-qz-uQt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wNp-s3-tWJ"/>
+                            <constraint firstItem="KW1-qz-uQt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xSs-hr-5Dg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
