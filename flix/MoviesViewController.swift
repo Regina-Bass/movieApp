@@ -91,6 +91,11 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let detailsViewController = segue.destination as!MovieDetailsViewController
         detailsViewController.movie = movie
         //cast
+        
+        //deselects the table cell when you go from one screen then back
+        tableView.deselectRow(at:indexPath, animated: true)
+        
+        
     }
     
     
