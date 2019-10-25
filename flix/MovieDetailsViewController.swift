@@ -2,21 +2,45 @@
 //  MovieDetailsViewController.swift
 //  flix
 //
-//  Created by Regina on 10/24/19.
+//  Created by Regina Bass on 10/24/19.
 //  Copyright © 2019 Regina Bass. All rights reserved.
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieDetailsViewController: UIViewController {
-
     var movie: [String: Any]!
     
+    @IBOutlet weak var backdropView: UIImageView!
+    @IBOutlet weak var posterView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var synopsisLabel: UILabel!
+    
     override func viewDidLoad() {
+        
+    
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         print(movie["title"])
+        
+        titleLabel.text = movie["title"] as? String
+        titleLabel.sizeToFit()
+        
+        synopsisLabel.text = movie["overview"] as? String
+        synopsisLabel.sizeToFit()
+        
+        //copy and paste URL stuff from MovieVC
+        let baseUrl = "http://image.tmdb.org/t/p/w185"
+        let posterPath = movie["poster_path"] as! String
+        let posterUrl = URL(string: baseUrl + posterPath)
+        posterView.af_setImage(withURL: posterUrl!)
+        
+        let backdropPath = movie["backdrop_path"] as! String
+        let backdropUrl = URL(string: "http://image.tmdb.org/t/p/w780" + backdropPath)
+        backdropView.af_setImage(withURL: backdropUrl!)
+        
     }
     
 
