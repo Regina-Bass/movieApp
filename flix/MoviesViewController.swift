@@ -73,5 +73,31 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.descriptionLabel.text = description
         return cell
     }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // think that you're 'preparing' the next screen by sending data etc
+        
+        print("Loading up the details screen")
+        //Two tasks - find the selected movie
+        //cast
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
+        //Pass the selected movie to the details view Controller
+        //sender is cell (that was tapped on)
+        //segueway
+        let detailsViewController = segue.destination as!MovieDetailsViewController
+        detailsViewController.movie = movie
+        //cast
+        
+        //deselects the table cell when you go from one screen then back
+        tableView.deselectRow(at:indexPath, animated: true)
+        
+        
+    }
+    
+    
 
 }
