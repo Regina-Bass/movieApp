@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,17 +26,54 @@
             </objects>
             <point key="canvasLocation" x="-181" y="-1013"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Grid View Controller-->
         <scene sceneID="qRh-k7-815">
             <objects>
-                <viewController id="p1X-3c-t4e" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sFG-8m-l9R" customClass="MovieGridViewControler">
+                <viewController id="p1X-3c-t4e" customClass="MovieGridViewController" customModule="flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="k0f-DQ-Qfa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="rEq-Rr-3yV"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="czP-Uy-Yn5">
+                            <size key="itemSize" width="196" height="276"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="3vx-n0-SZA" customClass="MovieGridCell" customModule="flix" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="196" height="276"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgb-ot-LEj">
+                                    <rect key="frame" x="0.0" y="0.0" width="196" height="276"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gL6-5w-j5h" customClass="posterView">
+                                            <rect key="frame" x="0.0" y="0.0" width="197" height="277"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="196" id="0hm-be-Jzi"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="276" id="1kK-Ag-Zwy"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="CIC-x9-RIw"/>
+                                        <constraint firstAttribute="height" constant="276" id="qQK-zY-TqB"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="zgb-ot-LEj" firstAttribute="leading" secondItem="3vx-n0-SZA" secondAttribute="leadingMargin" constant="-8" id="NKH-5G-pqc"/>
+                                    <constraint firstItem="zgb-ot-LEj" firstAttribute="top" secondItem="3vx-n0-SZA" secondAttribute="topMargin" constant="-8" id="jfK-c0-Uxz"/>
+                                </constraints>
+                                <size key="customSize" width="196" height="276"/>
+                                <connections>
+                                    <outlet property="posterView" destination="gL6-5w-j5h" id="e8k-Tm-BLn"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
                     <navigationItem key="navigationItem" id="2zs-Yc-vSO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="k0f-DQ-Qfa" id="WRg-Yg-5jz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ei6-Rr-EJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
