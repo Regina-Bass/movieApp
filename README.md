@@ -1,6 +1,6 @@
 # Flix
 
-Flix is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+Flix is an app that allows users to browse movies from the [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction).
 
 
 
@@ -21,7 +21,18 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="http://g.recordit.co/II9PLwpfm7.gif" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+In Flix Part 2 I learned about 
+- Collection Views
+- Aspect Fill
+- Show Navigation 
+- `deselectRow`
+
+I also learned that there are functions within API such as the 'Get Similar Movies' that we used for the superhero tab that takes in a variable and assembles information for you (*Not the same as Reccommendations).
+
+I ran into two challenges in this lab:
+- One was that I kept getting a nil error when I switched the cell variable from 
+`UItableViewCell()` to `tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell`.
+However for some reason when I opened it up the next day it was working fine so it may have just been some cleaning problem.
 
 ---
 
