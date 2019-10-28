@@ -29,11 +29,6 @@ In Flix Part 2 I learned about
 
 I also learned that there are functions within API such as the 'Get Similar Movies' that we used for the superhero tab that takes in a variable and assembles information for you (*Not the same as Reccommendations).
 
-I ran into two challenges in this lab:
-- One was that I kept getting a nil error when I switched the cell variable from 
-`UItableViewCell()` to `tableView.dequeueReusableCell(withIdentifier: "MovieCell") as! MovieCell`.
-However for some reason when I opened it up the next day it was working fine so it may have just been some cleaning problem.
-
 ---
 
 ## Flix Part 1
