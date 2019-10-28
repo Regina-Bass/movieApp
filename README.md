@@ -21,13 +21,13 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="http://g.recordit.co/II9PLwpfm7.gif" width=250><br>
 
 ### Notes
-In Flix Part 2 I learned about 
+In Flix Part 2 I learned about: 
 - Collection Views
 - Aspect Fill
 - Show Navigation 
 - `deselectRow`
 
-I also learned that there are functions within API such as the 'Get Similar Movies' that we used for the superhero tab that takes in a variable and assembles information for you (*Not the same as Reccommendations).
+I also learned that there are functions within API such as the 'Get Similar Movies' that we used for the superhero tab that takes in a variable and assembles information for you (*Not the same as Reccommendations*).
 
 ---
 
